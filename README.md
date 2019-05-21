@@ -1,44 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###webzhi-demo
 
-## Available Scripts
+此项目是一个antd+ts的初始化项目。
 
-In the project directory, you can run:
 
-### `npm start`
+使用 yarn 创建项目。
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`$ yarn create react-app antd-demo-ts --typescript`
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+如果你使用的是 npm（接下来我们都会用 yarn 作为例子，如果你习惯用 npm 也没问题）。
 
-### `npm test`
+`$ npx create-react-app antd-demo-ts --typescript`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**引入 antd**
 
-### `npm run build`
+`$ yarn add antd`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+引入 react-app-rewired 并修改 package.json 里的启动配置。由于新的 react-app-rewired@2.x 版本的关系，你还需要安装 customize-cra。
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+`$ yarn add react-app-rewired customize-cra`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+然后在项目根目录创建一个 config-overrides.js 用于修改默认配置。
 
-### `npm run eject`
+````
+module.exports = function override(config, env) {
+ 
+    // do stuff with the webpack config...
+    return config;
+};
+````
+babel-plugin-import 是一个用于按需加载组件代码和样式的 babel 插件（原理），现在我们尝试安装它并修改 config-overrides.js 文件。
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+````
+$ yarn add babel-plugin-import
+````
+详情请移步：
+https://ant-design.gitee.io/docs/react/use-in-typescript-cn

@@ -1,7 +1,25 @@
 {
-  "name": "antd-demo-ts",
-  "version": "0.1.0",
-  "private": true,
+  "name": "webzhi-demo",
+  "version": "0.1.1",
+  "title": "antd-demo-ts",
+  "description": "一个默认的初始化antd的ts项目",
+  "homepage": "https://www.asni.cn",
+  "keywords": [
+    "ant",
+    "design",
+    "react",
+    "react-component",
+    "component",
+    "components",
+    "ui",
+    "webzhi",
+    "demo"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5679361/webzhi-demo"
+  },
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.0",
     "@types/jest": "24.0.11",

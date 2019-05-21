@@ -8,7 +8,7 @@ class AppState {
     @observable count = 0;
     @observable name = '萝卜';
     
-    @action.bound
+    @action
     setCount(count) {
         this.count = count
     }

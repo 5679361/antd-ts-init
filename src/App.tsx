@@ -3,7 +3,9 @@ import { Button, DatePicker } from 'antd'
 import { observer } from 'mobx-react'
 import './App.css';
 
-
+/**
+ * App demo
+ */
 @observer
 class App extends Component<any> {
   onChange = (e: any) => {
